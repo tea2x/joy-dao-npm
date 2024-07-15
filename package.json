@@ -1,0 +1,33 @@
+{
+  "name": "joy-dao",
+  "version": "0.0.1",
+  "description": "Nervos DAO transaction builder",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "tea2x",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "@ckb-ccc/connector-react": "^0.0.5-alpha.13",
+    "@ckb-ccc/core": "^0.0.5-alpha.13",
+    "@ckb-ccc/lumos-patches": "^0.0.5-alpha.2",
+    "@ckb-lumos/common-scripts": "^0.22.2",
+    "@ckb-lumos/lumos": "^0.22.2",
+    "@joyid/ckb": "^0.0.8",
+    "@joyid/core": "^0.2.0-beta.4"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
+  }
+}
