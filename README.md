@@ -9,7 +9,7 @@ npm install joy-dao
 ```
 
 ## Usage
-### Importing the Package
+### Creating a config file
 Before using the package, you need to add a config.ts file to where joy-dao package is imported (commonly it is src/ folder):
 ```json
 export const ISMAINNET = false;
@@ -160,6 +160,7 @@ export const COTA_AGGREGATOR_URL = ISMAINNET
 ```
 You might want to just adjust `ISMAINNET`, `FEE_RATE`, `MIN_FEE_RATE`, `DAO_MINIMUM_CAPACITY` and `MINIMUM_CHANGE_CAPACITY`
 
+### Importing the Package
 To use the package, you need to import it in your project. Here is an example of how to do this:
 ```javascript
 import { collectDeposits, collectWithdrawals, buildDepositTransaction, buildWithdrawTransaction, buildUnlockTransaction, batchDaoCells } from 'joy-dao';
