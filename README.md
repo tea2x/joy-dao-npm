@@ -10,7 +10,7 @@ npm install joy-dao
 
 ## Usage
 ### Creating a config file
-Before using the package, you need to add a config.ts file to where joy-dao package is imported (commonly it is src/ folder):
+Before using the package, you currently need to add a config.ts file to where joy-dao package is imported (commonly it is src/ folder), with the following default content:
 ```json
 export const ISMAINNET = false;
 

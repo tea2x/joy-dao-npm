@@ -1,6 +1,6 @@
 {
   "name": "joy-dao",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nervos DAO transaction builder",
   "main": "dist/index.js",
   "files": [
