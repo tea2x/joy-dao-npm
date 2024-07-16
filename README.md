@@ -1,5 +1,5 @@
 # CKB DAO Transaction Builder
-This package provides a set of functions to build [Nervos DAO](https://startwithnervos.com/nervos-faq/what-is-the-nervos-dao#:~:text=The%20Nervos%20DAO%20is%20an,third%20party%20outside%20of%20Nervos).) transactions that are compatible with **joyID** lock and **omni** lock. It includes functions for depositing, withdrawing, and unlocking DAO cells.
+This package provides a set of functions to build [Nervos DAO](https://startwithnervos.com/nervos-faq/what-is-the-nervos-dao#:~:text=The%20Nervos%20DAO%20is%20an,third%20party%20outside%20of%20Nervos) transactions that are compatible with **joyID** lock and **omni-lock**. It includes functions for depositing, withdrawing, and unlocking DAO cells.
 
 ## Installation
 To install this package, run the following command in your terminal:
