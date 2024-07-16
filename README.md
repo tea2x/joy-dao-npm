@@ -1,5 +1,5 @@
 # CKB DAO Transaction Builder
-This package provides a set of functions to build, sign, and send Nervos DAO transactions that are compatible with **joyID** lock and **omni** lock. It includes functions for depositing, withdrawing, and unlocking DAO cells. The package is designed to work with the CKB blockchain and its associated tools.
+This package provides a set of functions to build [Nervos DAO](https://startwithnervos.com/nervos-faq/what-is-the-nervos-dao#:~:text=The%20Nervos%20DAO%20is%20an,third%20party%20outside%20of%20Nervos).) transactions that are compatible with **joyID** lock and **omni** lock. It includes functions for depositing, withdrawing, and unlocking DAO cells.
 
 ## Installation
 To install this package, run the following command in your terminal:
@@ -10,7 +10,7 @@ npm install joy-dao
 
 ## Usage
 ### Importing the Package
-Before using the package, you need to add a config.ts file to your project main directory:
+Before using the package, you need to add a config.ts file to where joy-dao package is imported (commonly it is src/ folder):
 ```json
 export const ISMAINNET = false;
 
@@ -158,7 +158,7 @@ export const COTA_AGGREGATOR_URL = ISMAINNET
   : "https://cota.nervina.dev/aggregator";
 
 ```
-You might want to just adjust `FEE_RATE`, `MIN_FEE_RATE`, `DAO_MINIMUM_CAPACITY` and `MINIMUM_CHANGE_CAPACITY`
+You might want to just adjust `ISMAINNET`, `FEE_RATE`, `MIN_FEE_RATE`, `DAO_MINIMUM_CAPACITY` and `MINIMUM_CHANGE_CAPACITY`
 
 To use the package, you need to import it in your project. Here is an example of how to do this:
 ```javascript
