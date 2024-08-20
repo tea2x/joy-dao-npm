@@ -151,11 +151,20 @@ const unlock = (txSkeleton, fromAddress, daoWithdrawalCell) => __awaiter(void 0,
         });
     }
     // add dao unlock header deps
-    txSkeleton = txSkeleton.update("headerDeps", (headerDeps) => {
-        return headerDeps.push(daoDepositCell.blockHash, daoWithdrawalCell.blockHash);
-    });
+    let headerDeps = txSkeleton.get("headerDeps");
+    if (!headerDeps.contains(daoDepositCell.blockHash)) {
+        txSkeleton = txSkeleton.update("headerDeps", (headerDeps) => {
+            return headerDeps.push(daoDepositCell.blockHash);
+        });
+    }
+    if (!headerDeps.contains(daoWithdrawalCell.blockHash)) {
+        txSkeleton = txSkeleton.update("headerDeps", (headerDeps) => {
+            return headerDeps.push(daoWithdrawalCell.blockHash);
+        });
+    }
     // add dao unlock witness
-    const depositHeaderDepIndex = txSkeleton.get("headerDeps").size - 2;
+    headerDeps = txSkeleton.get("headerDeps");
+    const depositHeaderDepIndex = headerDeps.indexOf(daoDepositCell.blockHash);
     const defaultWitnessArgs = {
         inputType: codec_1.bytes.hexify(codec_1.number.Uint64LE.pack(depositHeaderDepIndex)),
     };
