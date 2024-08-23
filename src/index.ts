@@ -11,7 +11,7 @@ import {
   FEE_RATE,
   ISMAINNET,
 } from "./config";
-import { registerCustomLockScriptInfos } from "@ckb-lumos/common-scripts/lib/common";
+import { registerCustomLockScriptInfos, LockScriptInfo } from "@ckb-lumos/common-scripts/lib/common";
 
 import {
   TransactionSkeleton,
@@ -26,7 +26,7 @@ import {
 } from "./lib/helpers";
 
 const indexer = new Indexer(INDEXER_URL);
-registerCustomLockScriptInfos(generateDefaultScriptInfos());
+registerCustomLockScriptInfos(generateDefaultScriptInfos() as LockScriptInfo[]);
 
 /**
  * Fetch DAO deposits.
